@@ -2,9 +2,9 @@
 CS4320 Final Project
 
 # Members
-Jake Woratzeck (Product Owner)  
-Henry Heinze   
-Lee Offir   
-Youngbin Ha  
-Austin Parrish (Scrum Master)  
+Jake Woratzeck (Product Owner) </br>
+Henry Heinze </br>
+Lee Offir </br>
+Youngbin Ha </br>
+Austin Parrish (Scrum Master) </br>
 Chase Scott  
