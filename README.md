@@ -13,4 +13,4 @@ Chase Scott
 [Axosoft](https://jakeworatzeck.axosoft.com/)
 
 # ADDRESS
-[EC2](ec2-54-82-199-223.compute-1.amazonaws.com)
+[EC2](https://ec2-54-82-199-223.compute-1.amazonaws.com)
