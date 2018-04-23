@@ -1,35 +1,53 @@
-
 <!DOCTYPE html>
 
-<html lang="en"> 
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Login Form</title>
-  <link rel="stylesheet" href="css/style.css">
-
+	<title>Login | Fortnite Friend Finder</title>
+	<meta charset="UTF-8">
+	<link href="app.css" rel="stylesheet" type="text/css">
+    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+    
+    <script>
+        $(function(){
+            $("input[type=submit]").button();
+        });
+    </script>
 </head>
 <body>
-  <section class="container">
-    <div class="login">
-      <h1>Login to Web App</h1>
-      <form method="post" action="index.html">
-        <p><input type="text" name="login" value="" placeholder="Username or Email"></p>
-        <p><input type="password" name="password" value="" placeholder="Password"></p>
-        <p class="remember_me">
-          <label>
-            <input type="checkbox" name="remember_me" id="remember_me">
-            Remember me on this computer
-          </label>
-        </p>
-        <p class="submit"><input type="submit" name="commit" value="Login"></p>
-      </form>
+	<div id="mainContainer">
+        	<div class="titleWrapper"><h1>Fortnite Friend Finder</h1></div>
+    <div id="loginWidget" class="ui-widget">
+        
+        <h1 class="ui-widget-header" style="border-radius: 10px 10px 0 0;">Login</h1>
+        
+        <?php
+            if ($error) {
+                print "<div class=\"ui-state-error\">$error</div>\n";
+            }
+        ?>
+        
+        <form action="login.php" method="POST">
+            
+            <input type="hidden" name="action" value="do_login">
+            
+            <div class="stack">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" class="ui-widget-content ui-corner-all" autofocus value="<?php print $username; ?>">
+            </div>
+            
+            <div class="stack">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="ui-widget-content ui-corner-all">
+            </div>
+            
+            <div class="stack">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
     </div>
-
-    <div class="login-help">
-      <p>Forgot your password? <a href="index.html">Click here to reset it</a>.</p>
-    </div>
-  </section>
-
+    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='register.php';">Sign Up</button></div>
+    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.html';">Cancel</button></div>
 </body>
 </html>
