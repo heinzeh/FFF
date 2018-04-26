@@ -49,14 +49,14 @@
 			require "registration_form.php";
 			return;
 		}
-		echo $firstName;
-		echo $lastName;
-		echo $username;
-		echo $password;
-		echo $email;
-		echo $gamertag;
-		echo $console;
-		echo $gameType;
+		echo($firstName);
+		echo($lastName);
+		echo($username);
+		echo($password);
+		echo($email);
+		echo($gamertag);
+		echo($console);
+		echo($gameType);
 		
 		if($username != "" && $password != "" && $firstName != "" && $lastName != "" && $email != "" && $gamertag != "" && $console != "" && $gameType != "") {
 			if($password != $passwordConfirm){
