@@ -14,3 +14,8 @@ Chase Scott
 
 # ADDRESS
 [EC2](http://ec2-54-82-199-223.compute-1.amazonaws.com)
+
+# Fortnite Press Kit
+[Kit] (https://www.igdb.com/games/fortnite/presskit)
+
+
