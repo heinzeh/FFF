@@ -68,7 +68,7 @@
             </div>
             
             <div class="stack">
-            	<label for="console">Platform:</label>
+            	<label for="console" name="console" id="console">Platform:</label>
            		<select>
 		   			<option value="1">PC</option>
   					<option value="2">Xbox One</option>
@@ -77,11 +77,11 @@
            </div>
            
            <div class="stack">
-            	<label for="gametype">Preferred Gametype:</label>
+            	<label for="gameType" name="gameType" id="gameType">Preferred Gametype:</label>
            		<select>
 		   			<option value="1">Duos</option>
   					<option value="2">Squads</option>
-		   		</select>
+		   	</select>
            </div>
            
             <div class="stack">
