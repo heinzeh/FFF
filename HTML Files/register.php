@@ -49,6 +49,12 @@
 			require "registration_form.php";
 			return;
 		}
+		print $username;
+		print $password;
+		print $email;
+		print $gamertag;
+		print $console;
+		print $gametype;
 		
 		if($username != "" && $password != "" && $firstName != "" && $lastName != "" && $email != "" && $gamertag != "" && $console != "" && $gameType != "") {
 			if($password != $passwordConfirm){
