@@ -56,7 +56,7 @@
 				require "registration_form.php";
 				return;
 			}
-			
+			print "i made it past password check";
 			//$hashedPassword = hash('sha256', $password);
 			$insert_sql = "INSERT INTO members (firstName, lastName, username, password, gamertag, email, console, gameType) VALUES ('" . $firstName . "', '" . 
 			$lastName . "', '" . $username . "', '" . $password . "', '" . $gamertag . "', '" . $email . "', '" . $console . "', " . $gameType . ");";
