@@ -90,6 +90,6 @@
         </form> 
     </div>
     
-    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='login.php';">Cancel</button></div>
+    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.php';">Cancel</button></div>
 </body>
 </html>
