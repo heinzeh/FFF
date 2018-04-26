@@ -4,7 +4,7 @@
 <head>
 	<title>Fortnite Club Login</title>
 	<meta charset="UTF-8">
-	<link href="app.css" rel="stylesheet" type="text/css">
+	
     <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
     <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
