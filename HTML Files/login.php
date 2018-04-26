@@ -26,7 +26,7 @@
 		$username = empty($_POST['username']) ? '' : $_POST['username'];
 		$password = empty($_POST['password']) ? '' : $_POST['password'];
 		
-		$con = mysqli_connect('172.31.12.192' ,'root','cs4320','CS4320_Final_Project');
+		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
 		
 		if (!$con) {
 		    die('Could not connect: ' . mysqli_error($con));
@@ -39,8 +39,8 @@
 		
 		$row = mysqli_fetch_array($result);
 			
-		$hashedPassword = hash('sha256', $password);
-			if ($hashedPassword == $row['password'] && $password != "") {
+		//$hashedPassword = hash('sha256', $password);
+			if ($password == $row['password'] && $password != "") {
 				$_SESSION['loggedin'] = $username;
 				header("Location: membersArea.php");
 				
