@@ -8,7 +8,7 @@
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($loggedIn) {
-		header("Location: membersArea.php");
+		header("Location: fq_backend.php");
 		exit;
 	}
 	
@@ -33,7 +33,6 @@
 		$console = empty($_POST['console']) ? '' : $_POST['console'];
 		$gameType = empty($_POST['gameType']) ? '' : $_POST['gameType'];
 		
-	/*UPDATE THIS*/
 		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
 		
 		if (!$con) {
@@ -49,14 +48,6 @@
 			require "registration_form.php";
 			return;
 		}
-		echo($firstName);
-		echo($lastName);
-		echo($username);
-		echo($password);
-		echo($email);
-		echo($gamertag);
-		echo($console);
-		echo($gameType);
 		
 		if($username != "" && $password != "" && $firstName != "" && $lastName != "" && $email != "" && $gamertag != "" && $console != "" && $gameType != "") {
 			if($password != $passwordConfirm){
@@ -64,8 +55,7 @@
 				require "registration_form.php";
 				return;
 			}
-			print "i made it past password check";
-			//$hashedPassword = hash('sha256', $password);
+			
 			$insert_sql = "INSERT INTO members (firstName, lastName, username, password, gamertag, email, console, gameType) VALUES ('" . $firstName . "', '" . 
 			$lastName . "', '" . $username . "', '" . $password . "', '" . $gamertag . "', '" . $email . "', '" . $console . "', " . $gameType . ");";
 			
@@ -76,7 +66,7 @@
 			}
 			else {
 				$_SESSION['loggedin'] = $username;
-				header("Location: membersArea.php");
+				header("Location: fq_backend.php");
 			}
 			
 		}
