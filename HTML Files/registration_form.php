@@ -57,9 +57,14 @@
                 <input type="text" id="lastName" name="lastName" class="ui-widget-content ui-corner-all" value="<?php print $lastName; ?>">
             </div>
             
+	    <div class="stack">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" class="ui-widget-content ui-corner-all"  value="<?php print $email; ?>">
+            </div>
+		
             <div class="stack">
                 <label for="gamertag">Gamertag:</label>
-                <input type="text" id="gamertag" name="gamertag" class="ui-widget-content ui-corner-all">
+                <input type="text" id="gamertag" name="gamertag" class="ui-widget-content ui-corner-all" value="<?php print $email;>
             </div>
             
             <div class="stack">
@@ -68,7 +73,7 @@
 		   			<option value="1">PC</option>
   					<option value="2">Xbox One</option>
   					<option value="3">PS4</option>
-		   		</select>
+		   	</select>
            </div>
            
            <div class="stack">
