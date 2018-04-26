@@ -64,7 +64,7 @@
 		
             <div class="stack">
                 <label for="gamertag">Gamertag:</label>
-                <input type="text" id="gamertag" name="gamertag" class="ui-widget-content ui-corner-all" value="<?php print $email; ?>">
+                <input type="text" id="gamertag" name="gamertag" class="ui-widget-content ui-corner-all" value="<?php print $gamertag; ?>">
             </div>
             
             <div class="stack">
