@@ -31,7 +31,7 @@
 		$email = empty($_POST['email']) ? '' : $_POST['email'];
 		$gamertag= empty($_POST['gamertag']) ? '' : $_POST['gamertag'];
 		$console = empty($_POST['console']) ? '' : $_POST['console'];
-		$gametype = empty($_POST['gameType']) ? '' : $_POST['gameType'];
+		$gameType = empty($_POST['gameType']) ? '' : $_POST['gameType'];
 		
 	/*UPDATE THIS*/
 		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
