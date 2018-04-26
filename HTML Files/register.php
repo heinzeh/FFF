@@ -28,9 +28,10 @@
 		$username = empty($_POST['username']) ? '' : $_POST['username'];
 		$password = empty($_POST['password']) ? '' : $_POST['password'];
 		$passwordConfirm = empty($_POST['passwordConfirm']) ? '' : $_POST['passwordConfirm'];
+		$email = empty($_POST['email']) ? '' : $_POST['email'];
 		$gamertag= empty($_POST['gamertag']) ? '' : $_POST['gamertag'];
 		$console = empty($_POST['console']) ? '' : $_POST['console'];
-		$gametype = empty($_POST['gametype']) ? '' : $_POST['gametype'];
+		$gametype = empty($_POST['gameType']) ? '' : $_POST['gameType'];
 		
 	/*UPDATE THIS*/
 		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
@@ -49,7 +50,7 @@
 			return;
 		}
 		
-		if($username != "" && $password != "" && $firstName != "" && $lastName != "" && $gamertag != "" && $console != "" && $gametype != "") {
+		if($username != "" && $password != "" && $firstName != "" && $lastName != "" && $email != "" && $gamertag != "" && $console != "" && $gameType != "") {
 			if($password != $passwordConfirm){
 				$error = "Passwords do not match.";
 				require "registration_form.php";
@@ -57,8 +58,8 @@
 			}
 			
 			//$hashedPassword = hash('sha256', $password);
-			$insert_sql = "INSERT INTO members (firstName, lastName, username, password) VALUES ('" . $firstName . "', '" . 
-			$lastName . "', '" . $username . "', '" . $password . "', '" . $gamertag . "', '" . $console . "', " . $gametype . ");";
+			$insert_sql = "INSERT INTO members (firstName, lastName, username, password, gamertag, email, console, gameType) VALUES ('" . $firstName . "', '" . 
+			$lastName . "', '" . $username . "', '" . $password . "', '" . $gamertag . "', '" . $email . "', '" . $console . "', " . $gameType . ");";
 			
 			if(!mysqli_query($con,$insert_sql)){
 				$error = "User could not be created";
