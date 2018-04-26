@@ -56,9 +56,9 @@
 				return;
 			}
 			
-			$hashedPassword = hash('sha256', $password);
+			//$hashedPassword = hash('sha256', $password);
 			$insert_sql = "INSERT INTO members (firstName, lastName, username, password) VALUES ('" . $firstName . "', '" . 
-			$lastName . "', '" . $username . "', '" . $hashedPassword . "', '" . $gamertag . "', '" . $console . "', " . $gametype . ");";
+			$lastName . "', '" . $username . "', '" . $password . "', '" . $gamertag . "', '" . $console . "', " . $gametype . ");";
 			
 			if(!mysqli_query($con,$insert_sql)){
 				$error = "User could not be created";
