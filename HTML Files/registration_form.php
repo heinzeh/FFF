@@ -70,17 +70,17 @@
             <div class="stack">
             	<label for="console" >Platform:</label>
            		<select name="console" id="console">
-		   			<option value="1">PC</option>
-  					<option value="2">Xbox One</option>
-  					<option value="3">PS4</option>
+		   			<option value="pc">PC</option>
+  					<option value="xbox">Xbox One</option>
+  					<option value="ps4">PS4</option>
 		   	</select>
            </div>
            
            <div class="stack">
             	<label for="gameType" >Preferred Gametype:</label>
            		<select name="gameType" id="gameType">
-		   			<option value="1">Duos</option>
-  					<option value="2">Squads</option>
+		   			<option value="0">Duos</option>
+  					<option value="1">Squads</option>
 		   	</select>
            </div>
            
