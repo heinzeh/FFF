@@ -70,7 +70,8 @@
             <div class="stack">
             	<label for="console" >Platform:</label>
            		<select name="console" id="console">
-		   			<option value="pc" selected>PC</option>
+		   			<option disabled selected value></option>
+					<option value="pc">PC</option>
   					<option value="xbox">Xbox One</option>
   					<option value="ps4">PS4</option>
 		   	</select>
@@ -79,7 +80,8 @@
            <div class="stack">
             	<label for="gameType" >Preferred Gametype:</label>
            		<select name="gameType" id="gameType">
-		   			<option value="0" selected>Duos</option>
+		   			<option disabled selected value></option>
+					<option value="0">Duos</option>
   					<option value="1">Squads</option>
 		   	</select>
            </div>
