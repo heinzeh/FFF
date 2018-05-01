@@ -13,14 +13,15 @@ echo "<table style="width:100%">
  while($row = mysqli_fetch_array($result))
  {
 	 echo "<tr>";
-	 echo "<td>" . $row['FirstName'] . "</td>";
-	 echo "<td>" . $row['LastName'] . "</td>";
-	 echo "<td>" . $row['Username'] . "</td>";
-	 echo "<td>" . $row['Gamertag'] . "</td>";
-	 echo "<td>" . $row['GameType'] . "</td>";
-	 echo "<td>" . $row['Console'] . "</td>";
-	 echo "<td>" . $row['Email'] . "</td>";
+	 echo "<td>" . $row['firstName'] . "</td>";
+	 echo "<td>" . $row['lastName'] . "</td>";
+	 echo "<td>" . $row['username'] . "</td>";
+	 echo "<td>" . $row['gamertag'] . "</td>";
+	 echo "<td>" . $row['gameType'] . "</td>";
+	 echo "<td>" . $row['console'] . "</td>";
+	 echo "<td>" . $row['email'] . "</td>";
 	 echo "</tr>";
+
 }
 
 echo "</table>";
