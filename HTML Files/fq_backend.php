@@ -8,19 +8,20 @@
 	
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
-	/*if ($loggedIn) {
+	if ($loggedIn) {
 		header("Location: fq_backend.php");
 		exit;
-	}*/
+	}
 	
 	
-	/*$action = empty($_POST['action']) ? '' : $_POST['action'];
+	$action = empty($_POST['action']) ? '' : $_POST['action'];
 	//If user didn't get to this page from registration_form.php, send them there	
-	if ($action == 'do_registration') {
-		handle_registration();
+	//Find this
+	if ($action == 'do_query') {
+		handle_query();
 	} else {
-		registration_form();
-	}*/
+		query_form();
+	}
 
 	function handle_query() {
 		
@@ -63,11 +64,11 @@
 
 
 	
-	/*function registration_form() {
+	function query_form() {
 		$username = "";
 		$error = "";
 		require "friendQuery.php";
 		return;
-	}*/
+	}
 	
 ?>
