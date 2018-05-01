@@ -8,7 +8,7 @@
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($loggedIn) {
-		header("Location: friendQuery.php");
+		header("Location: fq_backend.php");
 		exit;
 	}
 	
@@ -42,7 +42,7 @@
 		//$hashedPassword = hash('sha256', $password);
 			if ($password == $row['password'] && $password != "") {
 				$_SESSION['loggedin'] = $username;
-				header("Location: friendQuery.php");
+				header("Location: fq_backend.php");
 				
 			} 
 			else {	
