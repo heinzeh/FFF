@@ -48,6 +48,6 @@
         </form>
     </div>
     <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='register.php';">Sign Up</button></div>
-    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.php';">Cancel</button></div>
+    <!--<div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.php';">Cancel</button></div> -->
 </body>
 </html>
