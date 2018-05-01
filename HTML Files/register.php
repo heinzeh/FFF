@@ -8,7 +8,7 @@
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
 	if ($loggedIn) {
-		header("Location: fq_backend.php");
+		header("Location: friendQuery.php");
 		exit;
 	}
 	
@@ -66,7 +66,7 @@
 			}
 			else {
 				$_SESSION['loggedin'] = $username;
-				header("Location: fq_backend.php");
+				header("Location: friendQuery.php");
 			}
 			
 		}
