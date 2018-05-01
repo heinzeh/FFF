@@ -8,10 +8,10 @@
 	
 	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
 	
-	if ($loggedIn) {
+	/*if ($loggedIn) {
 		header("Location: fq_backend.php");
 		exit;
-	}
+	}*/
 	
 	
 	/*$action = empty($_POST['action']) ? '' : $_POST['action'];
@@ -37,14 +37,14 @@
 				
 		if($console != "" && $gameType != "") {
 			
-			/*if(!mysqli_query($con,$query_sql)){
+			if(!mysqli_query($con,$query_sql)){
 				$error = "Could not make list";
 				require "friendQuery.php";
 				return;
 			}
 			else {
 			
-			}*/
+			}
 			
 			$sql="SELECT * FROM members WHERE console = '" . $console . "' AND gameType = '" . $gameType . "';
 
