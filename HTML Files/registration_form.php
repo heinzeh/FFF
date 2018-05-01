@@ -81,8 +81,8 @@
             	<label for="gameType" >Preferred Gametype:</label>
            		<select name="gameType" id="gameType">
 		   			<option disabled selected value></option>
-					<option value="0">Duos</option>
-  					<option value="1">Squads</option>
+					<option value="1">Duos</option>
+  					<option value="2">Squads</option>
 		   	</select>
            </div>
            
