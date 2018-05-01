@@ -21,7 +21,7 @@
 		registration_form();
 	}*/
 
-	function handle_registration() {
+	function handle_query() {
 		
 		$console = empty($_POST['console']) ? '' : $_POST['console'];
 		$gameType = empty($_POST['gameType']) ? '' : $_POST['gameType'];
@@ -36,15 +36,20 @@
 				
 		if($console != "" && $gameType != "") {
 			
-			if(!mysqli_query($con,$query_sql)){
+			/*if(!mysqli_query($con,$query_sql)){
 				$error = "Could not make list";
 				require "friendQuery.php";
 				return;
 			}
 			else {
-				//$_SESSION['loggedin'] = $username;
-				header("Location: fq_backend.php");
-			}
+			
+			}*/
+			
+			$sql="SELECT * FROM members WHERE console = '" . $console . "' AND gameType = '" . $gameType . "';
+
+			$result = mysqli_query($con,$sql);
+			
+			echo ($result);
 			
 		}
 		else {
