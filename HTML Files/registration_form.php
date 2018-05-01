@@ -8,7 +8,8 @@
     <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
     <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
-    
+    <link href="app.css" rel="stylesheet" type="text/css">
+
     <script>
         $(function(){
             $("input[type=submit]").button();
