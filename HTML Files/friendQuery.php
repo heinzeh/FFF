@@ -23,7 +23,10 @@
 <body>
   
 <form action="fq_backend.php" method="POST">
-            <div class="stack">
+            
+	<input type="hidden" name="action" value="do_query">
+	
+	<div class="stack">
             	<label for="console" >Platform:</label>
            		<select name="console" id="console">
 		   		<option disabled selected value></option>	      
