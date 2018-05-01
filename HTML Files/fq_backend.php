@@ -1,5 +1,5 @@
 <?php
-	require "friendQuery.html";
+	require "friendQuery.php";
 
 	if(!session_start()) {
 		header("Location: error.php");
