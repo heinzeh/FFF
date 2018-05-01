@@ -47,7 +47,7 @@
 			
 			}
 			
-			$sql="SELECT * FROM members WHERE console = '" . $console . "' AND gameType = '" . $gameType . "'";
+			$sql="SELECT * FROM members WHERE console = '" . $console . "' AND gameType = '" . $gameType . "';";
 
 			$result = mysqli_query($con,$sql);
 			
