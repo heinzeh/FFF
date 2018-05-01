@@ -17,6 +17,7 @@
 	//If user didn't get to this page from registration_form.php, send them there	
 	//Find this
 	if ($action == 'do_query') {
+		echo "Hello";
 		handle_query();
 	} else {
 		query_form();
