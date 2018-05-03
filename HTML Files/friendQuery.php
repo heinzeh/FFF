@@ -18,7 +18,7 @@ function showUser(str) {
                 document.getElementById("txtHint").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.open("GET","fq_backend.php?q="+str,true);
         xmlhttp.send();
     }
 }
@@ -28,7 +28,7 @@ function showUser(str) {
 
 <form>
 <select name="users" onchange="showUser(this.value)">
-  <option value="">Select your Gametype:</option>
+  <option value="">Select a person:</option>
   <option value="1">Duos</option>
   <option value="2">Squads</option>
   </select>
