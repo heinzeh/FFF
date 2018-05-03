@@ -1,0 +1,8 @@
+body{
+  padding: 1px 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("mainimg.jpg");
+  background-size: cover;
+  color: #fff;
+}
