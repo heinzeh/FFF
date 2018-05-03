@@ -1,8 +1,8 @@
 <?php
-	if(!session_start()) {
-		header("Location: error.php");
-		exit;
-	}
+	session_start();
+        if($_SESSION['loggedin'] == FALSE){
+            header("Location:index.php");
+        }
 	
 	$_SESSION = array();
 	
