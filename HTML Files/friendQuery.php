@@ -20,7 +20,7 @@ th {text-align: left;}
 <?php
 $q = intval($_GET['q']);
 
-$con = mysqli_connect('localhost','peter','abc123','my_db');
+$con = mysqli_connect('localhost','root','cs4320','CS4320_Final_Project');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
