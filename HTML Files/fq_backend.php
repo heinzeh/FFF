@@ -21,8 +21,8 @@ $con = mysqli_connect('localhost','root','cs4320','CS4320_Final_Project');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
-mysqli_select_db($con,"members");
-$sql="SELECT * FROM members WHERE id = '".$q."'";
+mysqli_select_db($con,"CS4320_Final_Project");
+$sql="SELECT * FROM members WHERE id = 6";
 $result = mysqli_query($con,$sql);
 echo "<table>
 <tr>
