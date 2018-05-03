@@ -1,60 +1,53 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 <head>
-  <title>Fortnite Friend Finder</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-  <style type="text/css">
+table, td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
 
-    .container {
-      position:absolute;
-      top:50%; left:50%; width:50%; height:50%;
-      overflow:hidden;
-      /*background-color:#FC0;*/
-      margin-top:-150px;margin-left:-350px;}
-
-  </style>
+th {text-align: left;}
+</style>
 </head>
 <body>
-  
-<form action="fq_backend.php" method="POST">
-            
-	<input type="hidden" name="action" value="do_query">
-	
-	<div class="stack">
-            	<label for="console" >Platform:</label>
-           		<select name="console" id="console">
-		   		<option disabled selected value></option>	      
-				<option value="pc">PC</option>
-  				<option value="xbox">Xbox One</option>
-  				<option value="ps4">PS4</option>
-		   	</select>
-            </div>
-  
-            <div class="stack">
-            	<label for="gameType" >Preferred Gametype:</label>
-           		<select name="gameType" id="gameType">
-		   		<option disabled selected value></option>
-				<option value="1">Duos</option>
-  				<option value="2">Squads</option>
-  					   
-		   	</select>
-            </div>
-  
-            <div class="stack">
-                <input type="submit" value="Submit">
-            </div>
-  </form>
 
+<?php
+$q = intval($_GET['q']);
+
+$con = mysqli_connect('localhost','peter','abc123','my_db');
+if (!$con) {
+    die('Could not connect: ' . mysqli_error($con));
+}
+
+mysqli_select_db($con,"ajax_demo");
+$sql="SELECT * FROM user WHERE id = '".$q."'";
+$result = mysqli_query($con,$sql);
+
+echo "<table>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+<th>Hometown</th>
+<th>Job</th>
+</tr>";
+while($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['FirstName'] . "</td>";
+    echo "<td>" . $row['LastName'] . "</td>";
+    echo "<td>" . $row['Age'] . "</td>";
+    echo "<td>" . $row['Hometown'] . "</td>";
+    echo "<td>" . $row['Job'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+mysqli_close($con);
+?>
 </body>
 </html>
-
-<!--References:
-  https://www.w3schools.com/bootstrap
-  http://aspdotnet.tistory.com/1015
--->
