@@ -1,7 +1,7 @@
 /*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);*/
 @font-face {
-    font-family: BurbankBigCondensedBlack;
-    src: url("BurbankBigCondensed-Black.otf") format("opentype");
+    font-family: "BurbankBigCondensedBlack";
+    src: url(https://www.fontyukle.net/en/Burbank+Big+Condensed+Black.ttf) format("truetype");
 }
 
 /*@font-face {
@@ -10,6 +10,10 @@
     src: url("path/GraublauWebBold.otf") format("opentype");
 }*/
 
+* {
+    font-family: BurbankBigCondensedBlack;
+}
+        
 #mainContainer{
   max-width: 850px;
   margin: 0 auto;
