@@ -35,6 +35,13 @@ function showUser(str) {
 </form>
 <br>
 <div id="txtHint"><b>User's info will be listed here...</b></div>
+<br>
+<div class="logoutWrapper roundBox">
+       		<?php echo  "<p>Logged in as: " . $loggedIn . "</p>"?>
+       		<br>
+       		<br>
+       		<button class="logoutButton" onclick="location.href='logout.php';">Log Out</button>
 
+</div>
 </body>
 </html>
