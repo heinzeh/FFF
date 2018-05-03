@@ -28,9 +28,9 @@ echo "<table>
 <tr>
 <th>Firstname</th>
 <th>Lastname</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
+<th>Username</th>
+<th>Console</th>
+<th>Gamertag</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
