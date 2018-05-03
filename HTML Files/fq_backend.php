@@ -22,15 +22,15 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"CS4320_Final_Project");
-$sql="SELECT * FROM members WHERE id = 6";
+$sql="SELECT * FROM members WHERE gameType = " . $q . ";
 $result = mysqli_query($con,$sql);
 echo "<table>
 <tr>
 <th>Firstname</th>
 <th>Lastname</th>
-<th>Username</th>
-<th>Console</th>
-<th>Gamertag</th>
+<th>Age</th>
+<th>Hometown</th>
+<th>Job</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
