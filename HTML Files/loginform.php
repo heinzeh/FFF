@@ -17,7 +17,12 @@
 </head>
 <body>
 	<div id="mainContainer">
-        	<div class="titleWrapper"><h1>Fortnite Friend Finder</h1></div>
+        	<div class="titleWrapper"><h1>Fortnite Friend Finder</h1>
+	</div>
+		
+	<div id="videoPlayer"><iframe width="560" height="315" src="https://www.youtube.com/embed/ldr0bg3S6MY" frameborder="0" allowfullscreen></iframe></div>
+		
+		<div id="siteDescription"><h3>"Put Description here"</h3></div>
     <div id="loginWidget" class="ui-widget">
         
         <h1 class="ui-widget-header" style="border-radius: 10px 10px 10px 10px;">Login</h1>
