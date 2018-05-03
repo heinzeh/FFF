@@ -1,4 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);*/
+@font-face {
+    font-family: BurbankBigCondensedBlack;
+    src: url("BurbankBigCondensed-Black.otf") format("opentype");
+}
+
+/*@font-face {
+    font-family: BurbankBigCondensedBlack;
+    font-weight: bold;
+    src: url("path/GraublauWebBold.otf") format("opentype");
+}*/
 
 #mainContainer{
   max-width: 850px;
