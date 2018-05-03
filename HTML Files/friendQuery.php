@@ -1,53 +1,42 @@
-<!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-    width: 100%;
-    border-collapse: collapse;
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.send();
+    }
 }
-
-table, td, th {
-    border: 1px solid black;
-    padding: 5px;
-}
-
-th {text-align: left;}
-</style>
+</script>
 </head>
 <body>
 
-<?php
-$q = intval($_GET['q']);
+<form>
+<select name="users" onchange="showUser(this.value)">
+  <option value="">Select a person:</option>
+  <option value="1">Peter Griffin</option>
+  <option value="2">Lois Griffin</option>
+  <option value="3">Joseph Swanson</option>
+  <option value="4">Glenn Quagmire</option>
+  </select>
+</form>
+<br>
+<div id="txtHint"><b>Person info will be listed here...</b></div>
 
-$con = mysqli_connect('localhost','root','cs4320','CS4320_Final_Project');
-if (!$con) {
-    die('Could not connect: ' . mysqli_error($con));
-}
-
-mysqli_select_db($con,"CS4320_Final_Project");
-$sql="SELECT * FROM members WHERE id = '".$q."'";
-$result = mysqli_query($con,$sql);
-
-echo "<table>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-<th>Age</th>
-<th>Hometown</th>
-<th>Job</th>
-</tr>";
-while($row = mysqli_fetch_array($result)) {
-    echo "<tr>";
-    echo "<td>" . $row['firstName'] . "</td>";
-    echo "<td>" . $row['lastName'] . "</td>";
-    echo "<td>" . $row['username'] . "</td>";
-    echo "<td>" . $row['console'] . "</td>";
-    echo "<td>" . $row['gamertag'] . "</td>";
-    echo "</tr>";
-}
-echo "</table>";
-mysqli_close($con);
-?>
 </body>
 </html>
