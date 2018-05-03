@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+        if($_SESSION['loggedin'] == FALSE){
+            header("Location:index.php");
+        }
+?>
+
 <html>
 <head>
 <link href="app2.css" rel="stylesheet" type="text/css">
