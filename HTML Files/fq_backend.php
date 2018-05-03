@@ -26,8 +26,8 @@ $sql="SELECT * FROM members WHERE gameType = " . $q . ";";
 $result = mysqli_query($con,$sql);
 echo "<table>
 <tr>
-<th>Firstname</th>
-<th>Lastname</th>
+<th>First Name</th>
+<th>Last Name</th>
 <th>Username</th>
 <th>Console</th>
 <th>Gamertag</th>
