@@ -1,3 +1,11 @@
+<?php
+
+    session_start();
+        if($_SESSION['loggedin'] == FALSE){
+            header("Location:index.php");
+        }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
