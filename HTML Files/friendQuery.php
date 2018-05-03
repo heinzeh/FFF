@@ -29,8 +29,8 @@ function showUser(str) {
 <form>
 <select name="users" onchange="showUser(this.value)">
   <option value="">Select a person:</option>
-  <option value="1">Duos</option>
-  <option value="2">Squads</option>
+  <option value="6">Duos</option>
+  <option value="7">Squads</option>
   </select>
 </form>
 <br>
