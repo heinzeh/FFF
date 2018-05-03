@@ -1,74 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, td, th {
+    border: 1px solid black;
+    padding: 5px;
+}
+th {text-align: left;}
+</style>
+</head>
+<body>
+
 <?php
-
-	if(!session_start()) {
-		header("Location: error.php");
-		exit;
-	}
-	
-	$loggedIn = empty($_SESSION['loggedin']) ? false : $_SESSION['loggedin'];
-	
-	if ($loggedIn) {
-		header("Location: fq_backend.php");
-		exit;
-	}
-	
-	
-	$action = empty($_POST['action']) ? '' : $_POST['action'];
-	//If user didn't get to this page from registration_form.php, send them there	
-	//Find this
-	if ($action == 'do_query') {
-		echo "Hello";
-		handle_query();
-	} else {
-		query_form();
-	}
-
-	function handle_query() {
-		
-		$console = empty($_POST['console']) ? '' : $_POST['console'];
-		$gameType = empty($_POST['gameType']) ? '' : $_POST['gameType'];
-		
-		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
-		
-		if (!$con) {
-		    die('Could not connect: ' . mysqli_error($con));
-		}
-		
-		//define $query_sql
-				
-		if($console != "" && $gameType != "") {
-			
-			if(!mysqli_query($con,$query_sql)){
-				$error = "Could not make list";
-				require "friendQuery.php";
-				return;
-			}
-			else {
-			
-			}
-			
-			$sql="SELECT * FROM members WHERE console = '" . $console . "' AND gameType = '" . $gameType . "'";
-
-			$result = mysqli_query($con,$sql);
-			
-			echo ($result);
-			
-		}
-		else {
-			$error = "Please fill out all fields.";
-			require "friendQuery.php";
-			return;
-		}
-	}
-				
-
-
-	
-	function query_form() {
-		$username = "";
-		$error = "";
-		require "friendQuery.php";
-		return;
-	}
-	
+$q = intval($_GET['q']);
+$con = mysqli_connect('localhost','root','cs4320','CS4320_Final_Project');
+if (!$con) {
+    die('Could not connect: ' . mysqli_error($con));
+}
+mysqli_select_db($con,"CS4320_Final_Project");
+$sql="SELECT * FROM members WHERE id = '".$q."'";
+$result = mysqli_query($con,$sql);
+echo "<table>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+<th>Age</th>
+<th>Hometown</th>
+<th>Job</th>
+</tr>";
+while($row = mysqli_fetch_array($result)) {
+    echo "<tr>";
+    echo "<td>" . $row['firstName'] . "</td>";
+    echo "<td>" . $row['lastName'] . "</td>";
+    echo "<td>" . $row['username'] . "</td>";
+    echo "<td>" . $row['console'] . "</td>";
+    echo "<td>" . $row['gamertag'] . "</td>";
+    echo "</tr>";
+}
+echo "</table>";
+mysqli_close($con);
 ?>
+</body>
+</html>
