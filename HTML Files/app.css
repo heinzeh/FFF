@@ -1,29 +1,19 @@
-/*@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);*/
+
 @font-face {
-    font-family: "BurbankBigCondensedBlack";
-    src: url(https://www.fontyukle.net/en/Burbank+Big+Condensed+Black.ttf) format("truetype");
+    font-family: 'Burbank';
+    src: url('BurbankBigCondensed-Black.ttf') format('truetype');
 }
 
-/*@font-face {
-    font-family: BurbankBigCondensedBlack;
-    font-weight: bold;
-    src: url("path/GraublauWebBold.otf") format("opentype");
-}*/
 
 * {
-    font-family: BurbankBigCondensedBlack;
+    font-family: 'Burbank';
 }
         
 #mainContainer{
   max-width: 850px;
   margin: 0 auto;
   text-align: center;
-}
-#mainContainer h1{
-  font-size: 40px;
-  transition-duration: 1s;
-  transition-timing-function: ease-in-put;
-  font-weight: 200;
+  font-size: 20px;
 }
 
 .logoutWrapper {
@@ -31,17 +21,13 @@
 }
 
 
-/*body, input, button {
-  font-family: 'Source Sans Pro', sans-serif;
-}*/
-
-button{
+.greenButton{
   display: block;
   width: 240px;
   height: 40px;
   padding: 0;
   margin: 10px auto;
-  font-weight: 700;
+  font-size: 20px;
   color: #fff;
   background-color: #22c08a;
   border: none;
@@ -54,23 +40,71 @@ button{
   text-align: center;
 }
 
-button:hover {
+.greenButton:hover {
   background-color: #26d69a;
 }
 
-button:active {
+.greenButton:active {
   background-color: #1eaa7a;
 }
 
+.redButton{
+  display: block;
+  width: 240px;
+  height: 40px;
+  padding: 0;
+  margin: 10px auto;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 20px;
+  transition: background-color .10s ease-in-out;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  text-align: center;
+}
+
+.redButton:hover {
+  background-color: #ff6666;
+}
+
+.redButton:active {
+  background-color: #cc0000
+}
 body{
-  padding: 1px 0;
   height: 100%;
   width: 100%;
-/*  background-image: url("https://cdn.vox-cdn.com/thumbor/0Tpsa_4uzQRxE-_Dg0MgKTrVCfg=/0x0:1619x897/1820x1213/filters:focal(681x320:939x578):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/59177933/battleroyaleactu.0.jpg");*/
   background-image: url("mainimg.jpg");
   background-size: cover;
   color: #fff;
 }
 
+.titleWrapper {
+	font-size: 60px;
+}
 
-/*References: https://freshdesignweb.com/css-login-form-templates/
+th {
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+table {
+	font-size: 25px;
+
+}
+
+#loginWidget {
+    background-color: #EEE;
+    border: 1px solid #DDD;
+    padding: 0.5em 0;
+    border-radius: 10px 10px 10px 10px;
+    color: black;
+    
+}
+
+
+

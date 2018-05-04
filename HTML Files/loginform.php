@@ -2,30 +2,31 @@
 
 <html>
 <head>
-	<title>Login | Fortnite Friend Finder</title>
+	<title>Fortnite Friend Finder</title>
 	<meta charset="UTF-8">
 	<link href="app.css" rel="stylesheet" type="text/css">
    	<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
-    	<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
    	<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     
-    <script>
-        $(function(){
-            $("input[type=submit]").button();
-        });
-    </script>
+
 </head>
 <body>
 	<div id="mainContainer">
-        	<div class="titleWrapper"><h1>Fortnite Friend Finder</h1>
+        	<div class="titleWrapper"><h1 class = "titleWrapper">Fortnite Friend Finder</h1>
 	</div>
 		
 	<div id="videoPlayer"><iframe width="560" height="315" src="https://www.youtube.com/embed/ldr0bg3S6MY" frameborder="0" allowfullscreen></iframe></div>
 		
-		<div id="siteDescription"><h3>"Put Description here"</h3></div>
+	<div id="siteDescription">
+		<h3>Fornite Friend Finder is a tool to find people to play with in the popular 'Battle Royale' mode in Fortnite.</h3>
+	
+		<h3>Login or Sign Up below to get started.</h3>
+	</div>
+    
     <div id="loginWidget" class="ui-widget">
         
-        <h1 class="ui-widget-header" style="border-radius: 10px 10px 10px 10px;">Login</h1>
+        <h1 class="ui-widget-header">Login</h1>
         
         <?php
             if ($error) {
@@ -48,11 +49,12 @@
             </div>
             
             <div class="stack">
-                <input type="submit" value="Submit">
+                <input class = "greenButton" style="font-family: 'Burbank';font-size: 20px;" type="submit" value="Submit">
             </div>
+            
         </form>
-    </div>
-    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='register.php';">Sign Up</button></div>
-    <!--<div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.php';">Cancel</button></div> -->
+        <button class="greenButton" style="font-family: 'Burbank';" onclick="location.href='register.php';">Sign Up</button>
+     </div>
+    
 </body>
 </html>

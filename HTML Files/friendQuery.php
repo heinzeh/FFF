@@ -8,7 +8,12 @@
 
 <html>
 <head>
-<link href="app2.css" rel="stylesheet" type="text/css">
+<title>Fortnite Friend Finder</title>
+<link href="app.css" rel="stylesheet" type="text/css">
+<script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+<script src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+
 <script>
 function showUser(str) {
     if (str == "") {
@@ -32,18 +37,28 @@ function showUser(str) {
     }
 }
 </script>
+
 </head>
 <body>
-
+<div id="mainContainer">
+        <div class="titleWrapper"><h1 class = "titleWrapper">Fortnite Friend Finder</h1>
+		</div>
 <form>
-<select name="users" onchange="showUser(this.value)">
-  <option disabled selected value="">Select your Gametype:</option>
+<select name="selectmenu" id="selectmenu" onchange="showUser(this.value)">
+  <option disabled selected value="">Preferred Gametype:</option>
   <option value=1>Duos</option>
   <option value=2>Squads</option>
-  </select>
+</select>
 </form>
 <br>
-<div id="txtHint"><b>User's info will be listed here...</b></div>
+<div id="txtHint"><b>Select your preferred gametype above to view people looking for partners.</b></div>
+
+<div class="logoutWrapper roundBox">
+		
+		<br>
+		<button class="redButton" onclick="location.href='logout.php';">Log Out</button>
+
+</div>
 
 </body>
 </html>

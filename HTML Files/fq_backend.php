@@ -32,13 +32,13 @@ if (!$con) {
 mysqli_select_db($con,"CS4320_Final_Project");
 $sql="SELECT * FROM members WHERE gameType = " . $q . ";";
 $result = mysqli_query($con,$sql);
-echo "<table>
+echo "<table bgcolor='#808080'>
 <tr>
-<th>First Name</th>
-<th>Last Name</th>
-<th>Username</th>
-<th>Console</th>
-<th>Gamertag</th>
+<th bgcolor='#595959' style='text-align: center;'>First Name</th>
+<th bgcolor='#595959' style='text-align: center;'>Last Name</th>
+<th bgcolor='#595959' style='text-align: center;'>Username</th>
+<th bgcolor='#595959' style='text-align: center;'>Console</th>
+<th bgcolor='#595959' style='text-align: center;'>Gamertag</th>
 </tr>";
 while($row = mysqli_fetch_array($result)) {
     echo "<tr>";

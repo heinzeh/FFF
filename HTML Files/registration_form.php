@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-        if($_SESSION['loggedin'] == FALSE){
-            header("Location:index.php");
+        if($_SESSION['loggedin'] == TRUE){
+            header("fq_backend.php");
         }
 ?>
 
@@ -10,7 +10,7 @@
 
 <html>
 <head>
-	<title>Fortnite Club Login</title>
+	<title>Fortnite Friend Finder</title>
 	<meta charset="UTF-8">
 	
     <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
@@ -18,15 +18,10 @@
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
     <link href="app.css" rel="stylesheet" type="text/css">
 
-    <script>
-        $(function(){
-            $("input[type=submit]").button();
-        });
-    </script>
 </head>
 <body>
 	<div id="mainContainer">
-        	<div class="titleWrapper"><h1>Fortnite Friend Finder</h1></div>
+        	<div><h1 class="titleWrapper">Fortnite Friend Finder</h1></div>
     <div id="loginWidget" class="ui-widget">
         
         <h1 class="ui-widget-header" style="border-radius: 10px 10px 10px 10px;">Registration</h1>
@@ -96,11 +91,12 @@
            </div>
            
             <div class="stack">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" class ="greenButton" style= "font-family: 'Burbank';font-size: 20px;" >
             </div>
         </form> 
+        <button class="redButton" style="font-family: 'Burbank';" onclick="location.href='index.php';">Cancel</button>
+
     </div>
     
-    <div class="logoutWrapper"><button class="logoutButton" onclick="location.href='index.php';">Cancel</button></div>
 </body>
 </html>
