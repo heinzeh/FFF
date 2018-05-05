@@ -30,7 +30,7 @@ if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 mysqli_select_db($con,"CS4320_Final_Project");
-$sql="SELECT * FROM members WHERE gameType = " . $q . ";";
+$sql="SELECT * FROM members WHERE gameType = '" . $q . "' ORDER BY RAND() LIMIT 8;";
 $result = mysqli_query($con,$sql);
 echo "<table bgcolor='#808080'>
 <tr>

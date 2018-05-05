@@ -16,7 +16,7 @@
         	<div class="titleWrapper"><h1 class = "titleWrapper">Fortnite Friend Finder</h1>
 	</div>
 		
-	<div id="videoPlayer"><iframe width="560" height="315" src="https://www.youtube.com/embed/ldr0bg3S6MY" frameborder="0" allowfullscreen></iframe></div>
+	<div id="videoPlayer"><iframe width="560" height="315" src="https://www.youtube.com/embed/2gUtfBmw86Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 		
 	<div id="siteDescription">
 		<h3>Fornite Friend Finder is a tool to find people to play with in the popular 'Battle Royale' mode in Fortnite.</h3>

@@ -30,12 +30,15 @@ function showUser(str) {
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 document.getElementById("txtHint").innerHTML = this.responseText;
+                showButton();
             }
         };
         xmlhttp.open("GET","fq_backend.php?q="+str,true);
         xmlhttp.send();
     }
 }
+
+function showButton () { $('#refresh').show(); }
 </script>
 
 </head>
@@ -52,6 +55,9 @@ function showUser(str) {
 </form>
 <br>
 <div id="txtHint"><b>Select your preferred gametype above to view people looking for partners.</b></div>
+<br>
+<button id="refresh" class="greenButton" onclick="showUser(document.getElementById('selectmenu').value);" style="display: none;">Refresh List</button>
+
 
 <div class="logoutWrapper roundBox">
 		
