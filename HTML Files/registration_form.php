@@ -24,7 +24,7 @@
         	<div><h1 class="titleWrapper">Fortnite Friend Finder</h1></div>
     <div id="loginWidget" class="ui-widget">
         
-        <h1 class="ui-widget-header" style="border-radius: 10px 10px 10px 10px;">Registration</h1>
+        <h1 class="ui-widget-header">Registration</h1>
         
         <?php
             if ($error) {
