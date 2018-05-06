@@ -22,6 +22,6 @@ Chase Scott
 [Kit](https://www.igdb.com/games/fortnite/presskit)
 
 #Video
-[![Video]](https://youtu.be/iJmJAF9WAXA "title")
+[Video](https://youtu.be/iJmJAF9WAXA)
 
 
