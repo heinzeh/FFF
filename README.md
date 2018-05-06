@@ -17,11 +17,12 @@ Chase Scott
 # Axosoft
 [Axosoft](https://jakeworatzeck.axosoft.com/)
 
+# Youtube Video
+[Video](https://youtu.be/iJmJAF9WAXA)
 
 # Fortnite Press Kit
 [Kit](https://www.igdb.com/games/fortnite/presskit)
 
-# Video
-[Video](https://youtu.be/iJmJAF9WAXA)
+
 
 
