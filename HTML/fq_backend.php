@@ -25,7 +25,7 @@ th {text-align: left;}
 
 <?php
 $q = intval($_GET['q']);
-$con = mysqli_connect('localhost','root','cs4320','CS4320_Final_Project');
+$con = mysqli_connect('localhost','root','Capstone18','FFF');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
