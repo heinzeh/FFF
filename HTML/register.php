@@ -33,7 +33,7 @@
 		$console = empty($_POST['console']) ? '' : $_POST['console'];
 		$gameType = empty($_POST['gameType']) ? '' : $_POST['gameType'];
 		
-		$con = mysqli_connect('localhost' ,'root','cs4320','CS4320_Final_Project');
+		$con = mysqli_connect('localhost' ,'root','Capstone18','FFF');
 		
 		if (!$con) {
 		    die('Could not connect: ' . mysqli_error($con));
